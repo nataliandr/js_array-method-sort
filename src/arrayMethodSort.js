@@ -22,15 +22,11 @@ function applyCustomSort() {
 
     const compare = compareFunction || defaultCompare;
 
-    // 2. Алгоритм Bubble Sort
-    // Робимо копію довжини, щоб не звертатися до this.length постійно
     const len = this.length;
 
     for (let i = 0; i < len; i++) {
       for (let j = 0; j < len - 1 - i; j++) {
-        // Викликаємо compare з поточними елементами
         if (compare(this[j], this[j + 1]) > 0) {
-          // Міняємо місцями (Swap)
           const temp = this[j];
 
           this[j] = this[j + 1];
